@@ -1,8 +1,9 @@
 import { StyleSheet, View,Image,Text } from 'react-native'
 import React from 'react'
 import Get from "../../res/images/Illustrations/il_getStarted.png";
+import { Button, Gap } from '../../compenents';
 
-const GetStarted = () => {
+const GetStarted = ({navigation}) => {
   return (
     <View style={styles.screen}>
       <Image source={Get} style={styles.image}/>
@@ -10,6 +11,8 @@ const GetStarted = () => {
           <Text style={styles.textSlogan}>Shop Your Daily</Text>
           <Text style={styles.textSlogan}>Necessary</Text>
       </View>
+      <Gap height={90}/>
+      <Button onPress={() => navigation.replace('MainApp')}/>
     </View>
   )
 }
