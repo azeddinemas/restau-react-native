@@ -4,7 +4,7 @@ const mainColors = {
   white: '#FFFFFF',
   grey: '#8D92A3',
   peace: '#a4b0be',
-  lightGrey: 'rgba(196, 196, 196, 0.5)',
+  lightGrey: '#f1f2f6',
   darkGreen: '#275A02',
 };
 

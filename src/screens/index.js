@@ -4,4 +4,4 @@ import Notification from "./Notification";
 import Profile from "./Profile";
 import Favorite from "./Favorite";
 
-export {GetStarted, Home, Notification, Profile, Favorite};
+export { GetStarted,Home, Notification, Profile, Favorite};

@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Gap = ({height,width}) => {
-  return <View style={{height:height,width:width}}></View>
+const BoxItemCategories = () => {
+  return (
+    <View>
+    </View>
+  )
 }
 
-export default Gap
+export default BoxItemCategories
 
 const styles = StyleSheet.create({})
