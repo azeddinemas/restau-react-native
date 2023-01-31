@@ -27,7 +27,7 @@ const BoxItemTopProduct = ({bgColor,icon,text,price,onPress}) => {
 export default BoxItemTopProduct
 
 const styles = StyleSheet.create({
-    containe : bgColor => ({
+    container : bgColor => ({
         height:160,
         width:160,
         backgroundColor:bgColor,

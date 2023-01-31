@@ -62,9 +62,6 @@ const BottomNavigator = ({ state, descriptors, navigation }) => {
                 onLongPress={onLongPress}
               >
                 <Icon label={label} isFocused={isFocused}/>
-                <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
-                  {label}
-                </Text>
               </TouchableOpacity>
             );
           })}

@@ -1,9 +1,9 @@
-import { StyleSheet, Text, useColorScheme, View,SafeAreaView, StatusBar,ScrollView, TextInput } from 'react-native'
+import { StyleSheet, Text, useColorScheme, View,SafeAreaView, StatusBar,ScrollView, TextInput,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { IC_Bakery, IC_Bakery2, IC_Drinks, IC_Fruits, IC_Search, IC_Vegetables, IL_Cauliflawer_PNG, IL_Grapes_PNG, IL_Greentea_PNG, IL_Tomato_PNG } from '../../res';
-import { BoxItemTopProduct, Gap, Header } from '../../compenents';
+import { BoxItemCategories, BoxItemTopProduct, Gap, Header } from '../../compenents';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const isDarkMode = useColorScheme() === 'dark';
   const dataTopProducts = [
     {
@@ -61,7 +61,7 @@ const Home = () => {
       bgColor: 'rgba(140, 250, 145,0.5)',
       price: 1.53,
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
+    }
   ];
   return (
     <SafeAreaView style={styles.flex1}>
@@ -123,13 +123,14 @@ const Home = () => {
               </TouchableOpacity>
             </View>
             <View style={styles.sectionBoxTopProducts}>
-              {dataTopProducts.map(()=>{
+              {dataTopProducts.map((item, index)=>{
                 return(
                   <BoxItemTopProduct key={index}
                   bgColor={item.bgColor}
                   icon={item.icon}
                   text={item.name}
                   price={item.price}
+                  onPress={()=>navigation.navigate('Detail',item)}
                   />
                 )
               })}

@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 function MainApp() {
   return (
     <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Home" component={Home} options={{headerShown:false}} />
       <Tab.Screen name="Favorite" component={Favorite} />
       <Tab.Screen name="Notification" component={Notification} />
       <Tab.Screen name="Profile" component={Profile} />
